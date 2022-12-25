@@ -1,0 +1,365 @@
+
+:root {
+    --main-color: rgb(233, 21, 21);
+    --sec-color: green;
+    --bg-color: rgb(136, 234, 241);
+    --bg2-color: rgb(74, 170, 74);
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    --o-box-sizing: border-box;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.container {
+    width: var(--container-width-lg);
+}
+
+/*======= body=========*/
+
+body {
+    background: linear-gradient(#111, #222);
+    width: 100%;
+    height: 100vh;
+    display: grid;
+}
+ .container {
+    background-color:rgba(225, 255, 255, 0.1);
+    height: 80%;
+    justify-self: center;
+    align-self: center;
+    border-radius: 1.5rem;
+    overflow: hidden;
+ }
+
+ body::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    background-color:indianred;
+    z-index: -1;
+ }
+/*======= NAV=========*/
+
+ nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    padding: 1.5rem 1rem;
+}
+
+ul li {
+    margin: 0 2rem;
+}
+
+ul li a {
+    color:rgb(74, 170, 74);
+    font-size: 1.1rem;
+}
+
+ .logo {
+    padding: 1.5rem 4rem;
+    color:rgb(74, 170, 74);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family:monospace;
+ }
+
+ /*======= HEADER =========*/
+
+ .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 4rem;
+ }
+
+ .content .text {
+    width: 40%;
+ }
+
+ .text h2 {
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.1rem;
+    color:lightgreen;
+ }
+
+ .text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 40px;
+    color: #999;
+    font-family: sans-serif;
+ }
+
+ .text .btn {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: #fff9;
+    font-family: sans-serif;
+    background-color: indianred;
+    padding: .9rem .7rem;
+    border-radius: .5rem;
+ }
+
+ .img {
+    width: 40%; 
+ } 
+
+.img img {
+   width: 100%;
+   border-radius: 30px;
+ }
+  
+ /*========== MEDIA TAPLATE ================*/
+  @media (min-width: 800px) and (max-width: 1150px) {
+    .img {
+        margin: 4rem 0;
+    }
+
+    .img img {
+        width: 30vw;
+        border-radius: 50px;
+      }
+    .content .text {
+        width: 60%;
+        margin: 2.5rem -1rem;
+   }
+   .text p {
+    line-height: 30px;
+   }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+      
+    .content {
+        flex-direction: column;
+        width: 80%;
+        margin: 2rem 4rem;
+    }
+    .content .text {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+    .text p {
+        color:  #ffffff96;
+        line-height: 20px;
+    }
+    .text h2 {
+        font-size: 1.5rem;
+       }
+    .text .btn {
+        color: #ffffff96;
+        background-color: #e91e637a;
+    }
+    body::after {
+        clip-path: circle(50% at bottom);;
+    }
+    .img {
+        width: 40%;
+        margin: auto;
+        margin-top: 1rem
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    nav .logo {
+        padding: .5rem 1rem;
+    }
+    nav ul {
+        padding: 1rem 1rem;
+        margin: auto;
+    }
+    ul li {
+        margin: 0 1rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 599px){
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    nav .logo {
+        padding: .5rem 0 ;
+    }
+    nav ul {
+        padding-top: 0;
+        margin: auto;
+    }
+    ul li {
+        margin: 0 .5rem;
+    }
+    .img img {
+        display: none;
+    }
+    .content {
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .content .text {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+    .text p {
+        color:  #ffffff96;
+        line-height: 20px;
+    }
+    .text h2 {
+        font-size: 1.5rem;
+       }
+    .text .btn {
+        color: #ffffff96;
+        background-color: #e91e637a;
+    }
+    body::after {
+        clip-path: circle(50% at bottom);;
+    }
+}
+
+@media (min-width: 199px) and (max-width: 399px) {
+      
+    .container { 
+        width: 100%;
+    }
+    .img img {
+        display: none;
+    }
+    .content {
+        flex-direction: column;
+        width: 100%;
+        margin: 2rem 0;
+    }
+    .content .text {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .text p {
+        color:  #ffffff96;
+        line-height: 20px;
+    }
+    .text h2 {
+        font-size: 1.5rem;
+       }
+    .text .btn {
+        color: #ffffff96;
+        background-color: #e91e637a;
+    }
+    body::after {
+        clip-path: circle(50% at bottom);
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    nav .logo {
+        padding: .5rem 0 ;
+    }
+    nav ul {
+        padding: 0;
+        flex-direction: column;
+    }
+    ul li {
+        margin: 0 .5rem;
+    }
+}
+
+@media (max-width: 199px) {
+    .container { 
+        width: 100%;
+    }
+    .img img {
+        display: none;
+    }
+    .content {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0;
+    }
+    .content .text {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .text p {
+        color:  #ffffff96;
+        margin-bottom: .5rem;
+        line-height: 20px;
+    }
+    .text .btn {
+        color: #ffffff96;
+        background-color: #e91e637a;
+        padding: .5rem .5rem;
+        line-height: 0;
+    }
+    .text h2 {
+        margin-bottom: .3rem;
+        font-size: 1.5rem;
+    }
+    body::after {
+        clip-path: circle(50% at bottom);
+    }
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    nav .logo {
+        padding: .5rem 0 ;
+    }
+    nav ul {
+        padding: 0;
+        flex-direction: column;
+    }
+    ul li {
+        margin: 0 .5rem;
+    }
+}
+
+/*==================== HOVER ===========================*/
+
+nav a:hover {
+    color:rgb(233, 21, 21);
+}
+ .btn:hover {
+    background-color:crimson;
+    color: #fff;
+ }
+ .img img:hover {
+    transform: rotate(-10deg);
+ }
